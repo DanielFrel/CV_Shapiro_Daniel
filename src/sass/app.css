@@ -131,4 +131,106 @@
 }
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+}
+
+@media screen and (max-width: 1300px) {
+  .cv_body {
+    padding: 15px 10px;
+  }
+  .cv_body .about {
+    margin-top: 70px;
+    display: flex;
+  }
+  .cv_body .about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
+  .cv_body .about .contact {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+  .cv_body .about .contact a {
+    margin: 5px 0;
+  }
+  .cv_body .about .contact a:hover {
+    color: #2d27ce;
+  }
+  .cv_body .about .contact a svg {
+    padding: 3px;
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    margin-right: 0px;
+  }
+  .cv_body .about .contact a p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: 4px;
+  }
+  .cv_body div {
+    margin: 15px 0;
+  }
+  .cv_body div p {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .cv_body .MyProjects div .swift h3 {
+    margin-bottom: 10px;
+  }
+  .cv_body .MyProjects div .swift .swift_cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .cv_body .MyProjects div .swift .swift_cards .swift_cart {
+    margin: 0 15px;
+    margin-bottom: 10px;
+  }
+  .cv_body .MyProjects div .swift .swift_cards .swift_cart iframe {
+    border-radius: 20px;
+    width: 140px;
+    height: 280px;
+  }
+  .cv_body .MyProjects div .swift .swift_cards .swift_cart a img {
+    border-radius: 20px;
+    width: 140px;
+    height: 280px;
+  }
+  .cv_body .MyProjects div .react h3 {
+    margin-bottom: 10px;
+  }
+  .cv_body .MyProjects div .react .react_carts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .cv_body .MyProjects div .react .react_carts .react_cart {
+    margin: 0 15px;
+    margin-bottom: 10px;
+  }
+  .cv_body .MyProjects div .react .react_carts .react_cart img {
+    border-radius: 30px;
+    height: 140px;
+    width: 140px;
+  }
+  .cv_body .MyProjects div .verstka h3 {
+    margin-bottom: 10px;
+  }
+  .cv_body .MyProjects div .verstka .verstka_carts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .cv_body .MyProjects div .verstka .verstka_carts .verstka_cart {
+    margin: 0 15px;
+    margin-bottom: 10px;
+  }
+  .cv_body .MyProjects div .verstka .verstka_carts .verstka_cart img {
+    border-radius: 30px;
+    height: 140px;
+    width: 140px;
+  }
 }/*# sourceMappingURL=app.css.map */

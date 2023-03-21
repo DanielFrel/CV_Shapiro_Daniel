@@ -1,6 +1,5 @@
 nav {
   position: fixed;
-  min-width: calc(100vw - 100px);
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -64,8 +63,22 @@ nav #mobile i {
 }
 
 @media screen and (max-width: 1300px) {
+  nav {
+    padding: 15px 10px;
+  }
   nav h1 {
     margin-right: 15px;
+  }
+  nav a h1 {
+    padding-left: 0px;
+    margin-right: 0px;
+    margin: 0 5px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  nav a h2 {
+    font-size: 18px;
+    font-weight: 400;
   }
   nav #navbar {
     display: flex;
@@ -73,10 +86,10 @@ nav #mobile i {
     align-items: flex-start;
     justify-content: flex-start;
     position: fixed;
-    top: 80px;
-    right: -300px;
-    width: 300px;
-    height: 100vh;
+    top: 70px;
+    right: -200px;
+    width: 200px;
+    height: 350px;
     background: #669979;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 40px 0 0 10px;
