@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import './sass/app.css'
 import NavBar from './components/NavBar';
+import React from 'react';
+
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -33,18 +35,20 @@ const topFunction = () => {
 
 
 function App() {
+  const [soon, setSoon] = React.useState(true);
+  const [leng, setLeng] = React.useState(true);
   return (
     <div>
       {/* hello */}
-      <NavBar/>
-      <div className="cv_body">
+      <NavBar soon={soon} setSoon={setSoon} leng={leng} setLeng={setLeng}/>
+      <div className={soon ? "cv_body light-theme" : "cv_body dark-theme"}>
         <div className='about'>
           <img src="./avatar.jpeg" alt="avatar" />
 
-          <div className='contact'>
+          <div className={soon ? 'light-theme-color contact' : 'dark-theme-color contact'}>
             <a href="mailto:danielfrolovshapiro@gmail.com" target="_blank">
               <svg fill="#000000" width="50px" height="50px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 1694.235h1920V226H0v1468.235ZM112.941 376.664V338.94H1807.06v37.723L960 1111.233l-847.059-734.57ZM1807.06 526.198v950.513l-351.134-438.89-88.32 70.475 378.353 472.998H174.042l378.353-472.998-88.32-70.475-351.134 438.89V526.198L960 1260.768l847.059-734.57Z" fill-rule="evenodd"/>
+              <path d="M0 1694.235h1920V226H0v1468.235ZM112.941 376.664V338.94H1807.06v37.723L960 1111.233l-847.059-734.57ZM1807.06 526.198v950.513l-351.134-438.89-88.32 70.475 378.353 472.998H174.042l378.353-472.998-88.32-70.475-351.134 438.89V526.198L960 1260.768l847.059-734.57Z" fillRule="evenodd"/>
               </svg>
               <p>Email</p>
              </a>
@@ -64,7 +68,7 @@ function App() {
               <a href="https://www.linkedin.com/in/daniel-shapiro-8283a9125/" target="_blank">
               {/* <img src="" alt="" /> */}
               <svg fill="#000000" width="40px" height="40px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1168 601.321v74.955c72.312-44.925 155.796-71.11 282.643-71.11 412.852 0 465.705 308.588 465.705 577.417v733.213L1438.991 1920v-701.261c0-117.718-42.162-140.06-120.12-140.06-74.114 0-120.12 23.423-120.12 140.06V1920l-483.604-4.204V601.32H1168Zm-687.52-.792v1318.918H0V600.53h480.48Zm-120.12 120.12H120.12v1078.678h240.24V720.65Zm687.52.792H835.267v1075.316l243.364 2.162v-580.18c0-226.427 150.51-260.18 240.24-260.18 109.55 0 240.24 45.165 240.24 260.18v580.18l237.117-2.162v-614.174c0-333.334-93.573-457.298-345.585-457.298-151.472 0-217.057 44.925-281.322 98.98l-16.696 14.173H1047.88V721.441ZM240.24 0c132.493 0 240.24 107.748 240.24 240.24 0 132.493-107.747 240.24-240.24 240.24C107.748 480.48 0 372.733 0 240.24 0 107.748 107.748 0 240.24 0Zm0 120.12c-66.186 0-120.12 53.934-120.12 120.12s53.934 120.12 120.12 120.12 120.12-53.934 120.12-120.12-53.934-120.12-120.12-120.12Z" fill-rule="evenodd"/>
+    <path d="M1168 601.321v74.955c72.312-44.925 155.796-71.11 282.643-71.11 412.852 0 465.705 308.588 465.705 577.417v733.213L1438.991 1920v-701.261c0-117.718-42.162-140.06-120.12-140.06-74.114 0-120.12 23.423-120.12 140.06V1920l-483.604-4.204V601.32H1168Zm-687.52-.792v1318.918H0V600.53h480.48Zm-120.12 120.12H120.12v1078.678h240.24V720.65Zm687.52.792H835.267v1075.316l243.364 2.162v-580.18c0-226.427 150.51-260.18 240.24-260.18 109.55 0 240.24 45.165 240.24 260.18v580.18l237.117-2.162v-614.174c0-333.334-93.573-457.298-345.585-457.298-151.472 0-217.057 44.925-281.322 98.98l-16.696 14.173H1047.88V721.441ZM240.24 0c132.493 0 240.24 107.748 240.24 240.24 0 132.493-107.747 240.24-240.24 240.24C107.748 480.48 0 372.733 0 240.24 0 107.748 107.748 0 240.24 0Zm0 120.12c-66.186 0-120.12 53.934-120.12 120.12s53.934 120.12 120.12 120.12 120.12-53.934 120.12-120.12-53.934-120.12-120.12-120.12Z" fillRule="evenodd"/>
 </svg>
               <p>LinkedIn</p>
               </a>
@@ -72,18 +76,18 @@ function App() {
           </div>
         </div>
 
-        <div className='ProfessionalSkills'>
-            <h2>Professional Skills</h2>
-            <p>SwiftUI, HTML,  CSS, SCSS, JavaScript, React 18, TypeScript, Redux Toolkit, React Router v6, SQL, PHP, Windows,Java, Python, JUnit, iOS, Android, HTTP/HTTPS, HTTP2, XML, JSON, REST API, git, GitHub, GitLab. </p>
+        <div name="ProfessionalSkills" className='ProfessionalSkills'>
+            <h2>{leng ? 'Professional Skills' : 'Профессиональные навыки'} </h2>
+            <p>SwiftUI, HTML,  CSS, SCSS, JavaScript, React, TypeScript, Redux Toolkit, React Router v6, SQL, PHP, Windows,Java, Python, JUnit, iOS, Android, HTTP/HTTPS, HTTP2, XML, JSON, REST API, git, GitHub, GitLab. </p>
           </div>
 
           <div className='PersonalSkills'>
-            <h2>Personal Skills</h2>
-            <p>Highly capable of self-learning and constant improvement of professional skills, self- motivated, self-managed, determined and energetic, result-oriented, good time management and planning skills, excellent interpersonal skills.</p>
+            <h2>{leng ? 'Professional Skills' : 'Профессиональные навыки'}Personal Skills</h2>
+            <p>{leng ? 'Highly capable of self-learning and constant improvement of professional skills, self- motivated, self-managed, determined and energetic, result-oriented, good time management and planning skills, excellent interpersonal skills.' : 'Высокая способность к самообучению и постоянному совершенствованию профессиональных навыков, самомотивация, самоуправление, решительность и энергичность, ориентированность на результат, хорошие навыки управления временем и планирования, отличные навыки межличностного общения.'}</p>
           </div>
 
           <div className='MyProjects'>
-            <h2>MyProjects</h2>
+            <h2>{leng ? 'My Projects' : 'Мои проекты'}MyProjects</h2>
             <div>
               <div className='swift'>
                 <h3>Shiwt</h3>
@@ -96,9 +100,7 @@ function App() {
 
 
                     {/* <a href="https://youtube.com/shorts/gpFrYC1c5zs" target="_blank"> */}
-                    <iframe width="295" height="675" src="https://www.youtube.com/embed/gpFrYC1c5zs" title="Uber" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-                      
-                    </iframe>
+                    <iframe width="295" height="675" src="https://www.youtube.com/embed/gpFrYC1c5zs" title="Uber" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                       {/* <img src='./skills/swift/Uber.jpeg' alt="uber"/> */}
                       {/* <p>Uber</p> */}
                     {/* </a> */}
@@ -106,7 +108,7 @@ function App() {
                   </div>
 
                   <div className='swift_cart'>
-                    <iframe width="459" height="816" src="https://www.youtube.com/embed/MNi5zWIPv54" title="Furniture Shop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="459" height="816" src="https://www.youtube.com/embed/MNi5zWIPv54" title="Furniture Shop" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     {/* <a href=""> */}
                       {/* <img src='./skills/swift/FurnitureShop.png' alt="uber"/> */}
                       {/* <p>Furniture Shop</p> */}
@@ -114,7 +116,7 @@ function App() {
                   </div>
 
                   <div className='swift_cart'>
-                  <iframe width="459" height="816" src="https://www.youtube.com/embed/qzFFyYEVVh4" title="Crypto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  <iframe width="459" height="816" src="https://www.youtube.com/embed/qzFFyYEVVh4" title="Crypto" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     {/* <a href="">
                       <img src='./skills/swift/Crypto.png' alt="uber"/>
                       <p>Crypto</p>
@@ -122,7 +124,7 @@ function App() {
                   </div>
 
                   <div className='swift_cart'>
-                  <iframe width="459" height="816" src="https://www.youtube.com/embed/uty4Y4DnEoo" title="Locations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  <iframe width="459" height="816" src="https://www.youtube.com/embed/uty4Y4DnEoo" title="Locations" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     {/* <a href="">
                       <img src='./skills/swift/Locations.png' alt="uber"/>
                       <p>Locations</p>
@@ -130,7 +132,7 @@ function App() {
                   </div>
 
                   <div className='swift_cart'>
-                  <iframe width="459" height="816" src="https://www.youtube.com/embed/-KdHnUFMgvA" title="Todo list" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  <iframe width="459" height="816" src="https://www.youtube.com/embed/-KdHnUFMgvA" title="Todo list" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     {/* <a href="">
                       <img src='./skills/swift/ToDoList.png' alt="uber"/>
                       <p>To Do List</p>
@@ -138,7 +140,7 @@ function App() {
                   </div>
 
                   <div className='swift_cart'>
-                  <iframe width="459" height="816" src="https://www.youtube.com/embed/dL58YYA1wZE" title="registration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  <iframe width="459" height="816" src="https://www.youtube.com/embed/dL58YYA1wZE" title="registration" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     {/* <a href="">
                       <img src='./skills/swift/Registration.png' alt="uber"/>
                       <p>Registration</p>
@@ -156,7 +158,7 @@ function App() {
               </div>
               
               <div className='react'>
-                <h3>React</h3>
+                <h3>{leng ? 'React (without adaptation for phones)' : 'React (без адаптации для телефонов)'} {}</h3>
                 <div className='react_carts'>
                   
                   <div className='react_cart'>
@@ -211,7 +213,7 @@ function App() {
               </div>
 
               <div className='verstka'>
-                <h3>html, css</h3>
+                <h3>{leng ? 'html, css (without adaptation for phones)' : 'html, css (без адаптации для телефонов)'}</h3>
                 <div className='verstka_carts'>
                   
                   <div className='verstka_cart'>
@@ -275,23 +277,23 @@ function App() {
             </div>
           </div>
 
-          <div className='Education'>
-            <h2>Education</h2>
-            <p>Touro university Moscow September 2021 - December 2022</p>
-            <p>The Tel Ran Educational Center - Full stack developer, from November 2019 – June 2021.</p>
-            <p>Self-study on the websites sololearn.com and javarush.ru</p>
-            <p>In 2014 - 2017 studied at the Belarusian National Technical University.</p>
+          <div name="Education" className='Education'>
+            <h2>{leng ? 'Education' : 'Образование'}Education</h2>
+            <p>{leng ? 'Touro university Moscow September 2021 - December 2022' : 'Университет Туро Москва сентябрь 2021 - декабрь 2022'}</p>
+            <p>{leng ? 'The Tel Ran Educational Center - Full stack developer, from November 2019 – June 2021.' : 'Образовательный центр Tel Ran - разработчик полного стека, с ноября 2019 г. по июнь 2021 г.'}</p>
+            <p>{leng ? 'Self-study on the websites sololearn.com and javarush' : 'Самостоятельное обучение на сайтах sololearn.com и javarush'}</p>
+            <p>{leng ? 'In 2014 - 2017 studied at the Belarusian National Technical University.' : 'В 2014 - 2017 годах учился в Белорусском национальном техническом университете.'}</p>
           </div>
 
-          <div className='Languages'>
-            <h2>Languages</h2>
-            <p>Russian, Hebrew, English.</p>
+          <div  className='Languages'>
+            <h2>{leng ? 'Languages' : 'Языки'}</h2>
+            <p>{leng ? 'Russian, Hebrew, English.' : 'Русский, Иврит, Английский'}</p>
           </div>
 
       </div>
       
       
-      <button onСlick={topFunction} id="myBtn" title="Go to top">Top</button>
+      <button onClick={topFunction} id="myBtn" title="Go to top">⬆️</button>
     </div>
   );
 }

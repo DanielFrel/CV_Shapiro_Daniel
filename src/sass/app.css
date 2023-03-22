@@ -2,15 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #1A0A52;
 }
 
-.cv_body { /* Chrome 10-25, Safari 5.1-6 */
+.light-theme {
+  color: #1A0A52; /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(90deg, #72b68c, #7bc196, #85cca0, #94d6ad, #a2e2ba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dark-theme {
+  color: #94D6AD; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(90deg, #1a0a52, #1f0e5d, #251367, #2b1872, #311c7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.cv_body {
   padding: 40px 80px;
 }
 .cv_body .about {
-  margin-top: 70px;
+  margin-top: 105px;
   display: flex;
 }
 .cv_body .about img {
@@ -18,6 +26,12 @@
   height: 300px;
   border-radius: 150px;
   box-shadow: #1A0A52;
+}
+.cv_body .about .light-theme-color a p {
+  color: #1A0A52;
+}
+.cv_body .about .dark-theme-color a p {
+  color: #94D6AD;
 }
 .cv_body .about .contact {
   margin-left: 50px;
@@ -122,11 +136,11 @@
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
+  background-color: white; /* Set a background color */
+  color: black; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 25px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
 }
 #myBtn:hover {
@@ -138,7 +152,7 @@
     padding: 15px 10px;
   }
   .cv_body .about {
-    margin-top: 70px;
+    margin-top: 105px;
     display: flex;
   }
   .cv_body .about img {

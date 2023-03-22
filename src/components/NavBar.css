@@ -1,3 +1,18 @@
+.light-theme-nav {
+  color: #1A0A52;
+  background: #79AF8E;
+}
+
+.dark-theme-nav {
+  color: #94D6AD;
+  background: #1A0A52;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -5,21 +20,108 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #79AF8E;
   padding: 20px 80px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
-nav a {
+nav .light-theme-color ul li a {
+  color: #1A0A52;
+}
+nav .dark-theme-color ul li a {
+  color: #94D6AD;
+}
+nav .name {
+  margin-left: 15px;
+}
+nav .name h1 {
+  margin-left: 0;
+}
+nav .name h2 {
+  margin-left: 0;
+}
+nav .name h3 {
+  margin-left: 0;
+}
+nav .themeAndLangvish {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+nav .themeAndLangvish .theme {
+  display: flex;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background: #79AF8E;
+}
+nav .themeAndLangvish .theme span {
+  margin: 5px auto;
+  margin-bottom: 100px;
+  padding-bottom: 10px;
+}
+nav .themeAndLangvish .theme svg {
+  margin: 3px auto;
+}
+nav .themeAndLangvish .theme .active-theme {
+  background: white;
+  border: 1px solid 1A0A52;
+  border-radius: 10px;
+}
+nav .themeAndLangvish .theme .moon {
+  padding: 3px;
+  color: white;
+}
+nav .themeAndLangvish .lang {
+  color: #1A0A52;
+  display: flex;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-color: #79AF8E;
+}
+nav .themeAndLangvish .lang div {
+  display: flex;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+nav .themeAndLangvish .lang div .active-leng {
+  color: white;
+}
+nav .themeAndLangvish .lang div p {
+  color: #1A0A52;
+  border-radius: 15px;
+}
+nav .themeAndLangvish .lang div p:hover::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: #2d27ce;
+  position: fixed;
+  bottom: -4px;
+  left: 20px;
+}
+nav .themeAndLangvish .lang div span {
+  margin: 0 3px;
+}
+nav .DS {
   display: flex;
   align-items: center;
   text-decoration: none;
+}
+nav .DS .light-theme-a {
   color: #1A0A52;
 }
-nav a:hover {
+nav .DS .dark-theme-a {
+  color: #94D6AD;
+}
+nav .DS .name {
+  margin-left: 5px;
+}
+nav .DS:hover {
   color: #2d27ce;
 }
-nav a h1 {
-  padding-left: 15px;
+nav .DS h1 {
   margin-right: 10px;
 }
 nav .img_cv {
@@ -40,17 +142,16 @@ nav #navbar li a {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #1A0A52;
   transition: 0.3s ease-in-out;
 }
 nav #navbar li a:hover {
-  color: #2d27ce;
+  color: white;
 }
 nav #navbar li a:hover::after {
   content: "";
   width: 50%;
   height: 2px;
-  background: #2d27ce;
+  background: white;
   position: absolute;
   bottom: -4px;
   left: 20px;
@@ -58,27 +159,31 @@ nav #navbar li a:hover::after {
 nav #mobile {
   display: none;
 }
-nav #mobile i {
+nav #mobile .light-theme-a {
   color: #1A0A52;
+}
+nav #mobile .dark-theme-a {
+  color: #94D6AD;
 }
 
 @media screen and (max-width: 1300px) {
   nav {
     padding: 15px 10px;
   }
-  nav h1 {
-    margin-right: 15px;
-  }
-  nav a h1 {
+  nav .DS .name h1 {
     padding-left: 0px;
     margin-right: 0px;
-    margin: 0 5px;
+    margin: 0;
     font-size: 20px;
     font-weight: 600;
   }
-  nav a h2 {
+  nav .DS .name h2 {
     font-size: 18px;
     font-weight: 400;
+  }
+  nav .DS .name h3 {
+    font-size: 16px;
+    font-weight: 300;
   }
   nav #navbar {
     display: flex;
@@ -86,14 +191,12 @@ nav #mobile i {
     align-items: flex-start;
     justify-content: flex-start;
     position: fixed;
-    top: 70px;
+    top: 110px;
     right: -200px;
     width: 200px;
-    height: 350px;
-    background: #669979;
+    height: 250px;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 40px 0 0 10px;
-    transition: 0.3s ease-in-out;
   }
   nav #navbar li {
     margin-bottom: 25px;
