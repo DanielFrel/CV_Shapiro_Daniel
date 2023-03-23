@@ -8,6 +8,8 @@ import React from 'react';
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
+
+
 const scrollFunction = () => {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("myBtn").style.display = "block";
@@ -35,6 +37,9 @@ const topFunction = () => {
 
 
 function App() {
+  
+
+
   let isSoon = true
 
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {

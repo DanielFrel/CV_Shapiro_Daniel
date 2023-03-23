@@ -78,9 +78,17 @@ nav {
         }
     }
 
+    .m-l-auto{
+        margin-left: auto;
+        // margin-right: 25px;
+    }
+    .m-r-25{
+        margin-right: 25px;
+    }
+
     .themeAndLangvish {
         // display: inline;
-        margin-left: 0;
+        margin-left: 25px;
         display: flex;
         flex-direction: column;
 

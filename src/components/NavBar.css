@@ -41,8 +41,14 @@ nav .name h2 {
 nav .name h3 {
   margin-left: 0;
 }
+nav .m-l-auto {
+  margin-left: auto;
+}
+nav .m-r-25 {
+  margin-right: 25px;
+}
 nav .themeAndLangvish {
-  margin-left: 0;
+  margin-left: 25px;
   display: flex;
   flex-direction: column;
 }

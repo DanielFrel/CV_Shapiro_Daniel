@@ -3,6 +3,19 @@ import "./NavBar.css";
 
 // import cv from './'
 // import React, { useState } from 'react';
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function(event){
+      event.preventDefault();
+      const blockID = anchor.getAttribute('href')
+      document.querySelector('' + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      })
+    })
+  }
+
 
 function NavBar({ soon, setSoon, leng, setLeng }) {
 const [menu, setMenu] = React.useState(false);
@@ -36,8 +49,9 @@ const openMenu = () => {
           <h3>{leng ? 'Swift and React developer' : 'Swift и React разработчик'}</h3>
         </div>
       </div>
+      <div className="m-l-auto"></div>
+      <div className="flex m-r-25">
       
-      <div className="flex">
       <div className={soon ? 'light-theme-color' : 'dark-theme-color'}>
         <ul style={soon ? {background:  "#79AF8E"} : {background:  "#1A0A52"}} id='navbar' className={menu ? '#navbar active' : '#navbar' || 'light-theme-bg'}>
         {/* <ul id="navbar" className="#navbar active"> */}
@@ -55,6 +69,9 @@ const openMenu = () => {
           </li>
         </ul>
       </div>
+
+      
+
       <div className="themeAndLangvish">
         <button onClick={chengeTheme} className="theme">
           <svg
