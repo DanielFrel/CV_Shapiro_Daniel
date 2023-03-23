@@ -59,7 +59,7 @@ const openMenu = () => {
         <div className="name">
           <h1>{leng ? 'Shapiro Daniel 🇮🇱' : 'Шапиро Даниэль 🇮🇱'}</h1>
           <h2>{leng ? '26 years' : '26 лет'}</h2>
-          <h3>{leng ? 'Swift and React developer' : 'Swift и React разработчик'}</h3>
+          <h3>{leng ? 'SwiftUI and React developer' : 'SwiftUI и React разработчик'}</h3>
         </div>
       </div>
       <div className="m-l-auto"></div>

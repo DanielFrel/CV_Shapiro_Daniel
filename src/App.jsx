@@ -98,20 +98,17 @@ function App() {
   switch (languageFistTwo) { 
     case "en":
      if(currentLocation != 'en'){
-        // window.location.href = 'index_en.html';
         isNotRu = true
      }
       break;
   
     case "ru":
        if(currentLocation != 'ru')
-    //  window.location.href = 'index_ua.html';
     isNotRu = false
       break;
   
     default:
       if(currentLocation != 'en'){
-        // window.location.href = 'index.html';
         isNotRu = true
        }
   } 
@@ -180,7 +177,7 @@ function App() {
             <h2>{leng ? 'My Projects' : 'Мои проекты'}</h2>
             <div>
               <div className='swift'>
-                <h3>Swift</h3>
+                <h3>SwiftUI</h3>
                 <div className='swift_cards'>
                   
                   <div className='swift_cart'>
