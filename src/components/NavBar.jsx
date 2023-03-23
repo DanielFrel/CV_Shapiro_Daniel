@@ -18,6 +18,18 @@ const anchors = document.querySelectorAll('a[href*="#"]')
 
 
 function NavBar({ soon, setSoon, leng, setLeng }) {
+  const anchors = document.querySelectorAll('a[href*="#"]')
+
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function(event){
+      event.preventDefault();
+      const blockID = anchor.getAttribute('href')
+      document.querySelector('' + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      })
+    })
+  }
 const [menu, setMenu] = React.useState(false);
 const openMenu = () => {
     setMenu(!menu)
