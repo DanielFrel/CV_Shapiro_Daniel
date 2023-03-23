@@ -72,19 +72,22 @@ function App() {
     isSoon = true
   }
  
-  let isRu = false
+  let isNotRu = true
 
-  // var userLang = navigator.language || navigator.userLanguage; 
-  // console.log('user Lang' +  userLang)
+  var userLang = navigator.language || navigator.userLanguage; 
+  console.log('user Lang' +  userLang)
 
   if (navigator.language || navigator.userLanguage == 'ru') {
-    isRu = false
+    isNotRu = false
+  }else if(navigator.language || navigator.userLanguage == 'en') {
+    isNotRu = true
   } else {
-    isRu = true
+    isNotRu = true
   }
 
+
   const [soon, setSoon] = React.useState(isSoon);
-  const [leng, setLeng] = React.useState(isRu);
+  const [leng, setLeng] = React.useState(isNotRu);
   return (
     <div>
       {/* hello */}
