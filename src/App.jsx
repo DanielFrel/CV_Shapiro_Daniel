@@ -5,6 +5,19 @@ import NavBar from './components/NavBar';
 import React from 'react';
 
 
+// const anchors = document.querySelectorAll('a[href*="#"]')
+
+//   for (let anchor of anchors) {
+//     anchor.addEventListener("click", function(event){
+//       event.preventDefault();
+//       const blockID = anchor.getAttribute('href')
+//       document.querySelector('' + blockID).scrollIntoView({
+//         behavior: "smooth",
+//         block: "start"
+//       })
+//     })
+//   }
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
@@ -37,7 +50,18 @@ const topFunction = () => {
 
 
 function App() {
-  
+  // const anchors = document.querySelectorAll('a[href*="#"]')
+
+  // for (let anchor of anchors) {
+  //   anchor.addEventListener("click", function(event){
+  //     event.preventDefault();
+  //     const blockID = anchor.getAttribute('href')
+  //     document.querySelector('' + blockID).scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "start"
+  //     })
+  //   })
+  // }
 
 
   let isSoon = true
@@ -47,12 +71,24 @@ function App() {
   } else {
     isSoon = true
   }
+ 
+  let isRu = false
+
+  // var userLang = navigator.language || navigator.userLanguage; 
+  // console.log('user Lang' +  userLang)
+
+  if (navigator.language || navigator.userLanguage == 'ru') {
+    isRu = false
+  } else {
+    isRu = true
+  }
+
   const [soon, setSoon] = React.useState(isSoon);
-  const [leng, setLeng] = React.useState(true);
+  const [leng, setLeng] = React.useState(isRu);
   return (
     <div>
       {/* hello */}
-      <NavBar className='navbar' soon={soon} setSoon={setSoon} leng={leng} setLeng={setLeng}/>
+      <NavBar id="top" className='navbar' soon={soon} setSoon={setSoon} leng={leng} setLeng={setLeng}/>
       <div id='Сontacts' className={soon ? "light-theme m-b-105" : "dark-theme m-b-105"}  style={{height: "105px"}}></div>
      
       <div className={soon ? "cv_body light-theme" : "cv_body dark-theme"}>
@@ -110,7 +146,7 @@ function App() {
             <h2>{leng ? 'My Projects' : 'Мои проекты'}</h2>
             <div>
               <div className='swift'>
-                <h3>Shiwt</h3>
+                <h3>Swift</h3>
                 <div className='swift_cards'>
                   
                   <div className='swift_cart'>
@@ -313,8 +349,11 @@ function App() {
           </div>
 
       </div>
+      <a href="#top">
+
       
       <button onClick={topFunction} id="myBtn" title="Go to top"><img className='myBtn_img' style={{height: "20px", width: "20px"}} src="./upload.png" alt="" /></button>
+      </a>
       {/* <button onClick={topFunction} id="myBtn" title="Go to top">⬆</button> */}
     </div>
   );

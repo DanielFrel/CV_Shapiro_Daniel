@@ -3,18 +3,18 @@ import "./NavBar.css";
 
 // import cv from './'
 // import React, { useState } from 'react';
-const anchors = document.querySelectorAll('a[href*="#"]')
+// const anchors = document.querySelectorAll('a[href*="#"]')
 
-  for (let anchor of anchors) {
-    anchor.addEventListener("click", function(event){
-      event.preventDefault();
-      const blockID = anchor.getAttribute('href')
-      document.querySelector('' + blockID).scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      })
-    })
-  }
+//   for (let anchor of anchors) {
+//     anchor.addEventListener("click", function(event){
+//       event.preventDefault();
+//       const blockID = anchor.getAttribute('href')
+//       document.querySelector('' + blockID).scrollIntoView({
+//         behavior: "smooth",
+//         block: "start"
+//       })
+//     })
+//   }
 
 
 function NavBar({ soon, setSoon, leng, setLeng }) {
@@ -30,6 +30,7 @@ function NavBar({ soon, setSoon, leng, setLeng }) {
       })
     })
   }
+
 const [menu, setMenu] = React.useState(false);
 const openMenu = () => {
     setMenu(!menu)
@@ -52,8 +53,8 @@ const openMenu = () => {
     // className={soon ? "cv_body light-theme" : "cv_body dark-theme"
     // className="cv_body wrapper"
 
-    <nav className={soon ? 'light-theme-nav navbar' : 'dark-theme-nav navbar'}>
-      <div className={soon ? 'DS light-theme-a' : 'DS dark-theme-a'} href="#">
+    <nav id="top" className={soon ? 'light-theme-nav navbar' : 'dark-theme-nav navbar'}>
+      <div className={soon ? 'DS light-theme-a' : 'DS dark-theme-a'} href="#top">
         <img className="img_cv" src="./cv.png" alt="cv" />
         <div className="name">
           <h1>{leng ? 'Shapiro Daniel 🇮🇱' : 'Шапиро Даниэль 🇮🇱'}</h1>
