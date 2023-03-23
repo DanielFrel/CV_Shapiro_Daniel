@@ -18,7 +18,6 @@
   padding: 40px 80px;
 }
 .cv_body .about {
-  margin-top: 105px;
   display: flex;
 }
 .cv_body .about img {
@@ -152,7 +151,6 @@
     padding: 15px 10px;
   }
   .cv_body .about {
-    margin-top: 105px;
     display: flex;
   }
   .cv_body .about img {

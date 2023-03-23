@@ -27,7 +27,7 @@ const openMenu = () => {
     // className={soon ? "cv_body light-theme" : "cv_body dark-theme"
     // className="cv_body wrapper"
 
-    <nav className={soon ? 'light-theme-nav' : 'dark-theme-nav'}>
+    <nav className={soon ? 'light-theme-nav navbar' : 'dark-theme-nav navbar'}>
       <div className={soon ? 'DS light-theme-a' : 'DS dark-theme-a'} href="#">
         <img className="img_cv" src="./cv.png" alt="cv" />
         <div className="name">
@@ -42,16 +42,16 @@ const openMenu = () => {
         <ul style={soon ? {background:  "#79AF8E"} : {background:  "#1A0A52"}} id='navbar' className={menu ? '#navbar active' : '#navbar' || 'light-theme-bg'}>
         {/* <ul id="navbar" className="#navbar active"> */}
           <li>
-            <a className={soon ? 'light-theme-color' : 'dark-theme-color'} href="#">{leng ? 'Сontacts' : 'Контакты'}</a>
+            <a className={soon ? 'light-theme-color' : 'dark-theme-color'} href="#Сontacts">{leng ? 'Сontacts' : 'Контакты'}</a>
           </li>
           <li>
-            <a href="#">{leng ? 'Skills' : 'Навыки'}</a>
+            <a href="#Skills">{leng ? 'Skills' : 'Навыки'}</a>
           </li>
           <li>
-            <a href="#">{leng ? 'My projects' : 'Мои проекты'}</a>
+            <a href="#MyProjects">{leng ? 'My projects' : 'Мои проекты'}</a>
           </li>
           <li>
-            <a href="#Education">{leng ? 'Education' : 'Образование'}</a>
+            <a href="#education">{leng ? 'Education' : 'Образование'}</a>
           </li>
         </ul>
       </div>
