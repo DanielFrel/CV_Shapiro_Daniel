@@ -75,15 +75,46 @@ function App() {
   let isNotRu = true
 
   var userLang = navigator.language || navigator.userLanguage; 
-  console.log('user Lang' +  userLang)
+  console.log(userLang)
 
-  if (navigator.language || navigator.userLanguage == 'ru') {
+  console.log(typeof(userLang))
+
+  // if (navigator.language || navigator.userLanguage === 'ru') {
+  // console.log('user Lang' +  userLang)
+  //   isNotRu = false
+  //   console.log('Lang ' + userLang + ' ' + isNotRu)
+  // }else if(navigator.language || navigator.userLanguage === 'en') {
+
+  //   isNotRu = true
+  //   console.log('Lang ' + userLang + ' ' + isNotRu)
+  // } else {
+  //   isNotRu = true
+  // }
+
+  let language = window.navigator.language;
+  let languageFistTwo = language.substr(0,2); // To only keep the first 2 characters.
+  let currentLocation = document.getElementsByTagName('html')[0].getAttribute('lang-js')
+  
+  switch (languageFistTwo) { 
+    case "en":
+     if(currentLocation != 'en'){
+        // window.location.href = 'index_en.html';
+        isNotRu = true
+     }
+      break;
+  
+    case "ru":
+       if(currentLocation != 'ru')
+    //  window.location.href = 'index_ua.html';
     isNotRu = false
-  }else if(navigator.language || navigator.userLanguage == 'en') {
-    isNotRu = true
-  } else {
-    isNotRu = true
-  }
+      break;
+  
+    default:
+      if(currentLocation != 'en'){
+        // window.location.href = 'index.html';
+        isNotRu = true
+       }
+  } 
 
 
   const [soon, setSoon] = React.useState(isSoon);
