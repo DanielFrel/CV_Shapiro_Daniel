@@ -48,9 +48,10 @@ function App() {
     <div>
       {/* hello */}
       <NavBar className='navbar' soon={soon} setSoon={setSoon} leng={leng} setLeng={setLeng}/>
-      <div className='m-b-105' style={{height: "105px"}}></div>
+      <div id='Сontacts' className={soon ? "light-theme m-b-105" : "dark-theme m-b-105"}  style={{height: "105px"}}></div>
+     
       <div className={soon ? "cv_body light-theme" : "cv_body dark-theme"}>
-        <div id='Сontacts' className='about'>
+        <div  className='about'>
           <img src="./avatar.jpeg" alt="avatar" />
 
           <div className={soon ? 'light-theme-color contact' : 'dark-theme-color contact'}>
@@ -84,7 +85,10 @@ function App() {
           </div>
         </div>
 
-        <div id='Skills' name="ProfessionalSkills" className='ProfessionalSkills'>
+        <div id='Skills' className={soon ? "light-theme m-b-105" : "dark-theme m-b-105"}  style={{height: "105px"}}></div>
+
+
+        <div  name="ProfessionalSkills" className='ProfessionalSkills'>
             <h2>{leng ? 'Professional Skills' : 'Профессиональные навыки'} </h2>
             <p>SwiftUI, HTML,  CSS, SCSS, JavaScript, React, TypeScript, Redux Toolkit, React Router v6, SQL, PHP, Windows,Java, Python, JUnit, iOS, Android, HTTP/HTTPS, HTTP2, XML, JSON, REST API, git, GitHub, GitLab. </p>
           </div>
@@ -94,7 +98,10 @@ function App() {
             <p>{leng ? 'Highly capable of self-learning and constant improvement of professional skills, self- motivated, self-managed, determined and energetic, result-oriented, good time management and planning skills, excellent interpersonal skills.' : 'Высокая способность к самообучению и постоянному совершенствованию профессиональных навыков, самомотивация, самоуправление, решительность и энергичность, ориентированность на результат, хорошие навыки управления временем и планирования, отличные навыки межличностного общения.'}</p>
           </div>
 
-          <div id='MyProjects' className='MyProjects'>
+
+          <div id='MyProjects' className={soon ? "light-theme m-b-105" : "dark-theme m-b-105"}  style={{height: "105px"}}></div>
+
+          <div  className='MyProjects'>
             <h2>{leng ? 'My Projects' : 'Мои проекты'}</h2>
             <div>
               <div className='swift'>
@@ -285,7 +292,9 @@ function App() {
             </div>
           </div>
 
-          <div id='education'  name="education" className='Education'>
+          <div id='education' className={soon ? "light-theme m-b-105" : "dark-theme m-b-105"}  style={{height: "105px"}}></div>
+
+          <div  name="education" className='Education'>
             <h2>{leng ? 'Education' : 'Образование'}</h2>
             <p>{leng ? 'Touro university Moscow September 2021 - December 2022' : 'Университет Туро Москва сентябрь 2021 - декабрь 2022'}</p>
             <p>{leng ? 'The Tel Ran Educational Center - Full stack developer, from November 2019 – June 2021.' : 'Образовательный центр Tel Ran - разработчик полного стека, с ноября 2019 г. по июнь 2021 г.'}</p>

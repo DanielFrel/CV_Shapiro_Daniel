@@ -18,6 +18,11 @@
     background: -webkit-linear-gradient(90deg, #1a0a52,#1f0e5d,#251367,#2b1872,#311c7d);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(90deg, #1a0a52,#1f0e5d,#251367,#2b1872,#311c7d);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
 }
 
+.m-b-105{
+    // height: 100%;
+    // height: 105px;
+}
+
 .navbar{
     // padding-bottom: 105px;
     // margin-bottom: 105px;
@@ -30,6 +35,7 @@
     padding: 40px 80px;    
     
     .about{
+        margin-bottom: -100px;
         // margin-top: 105px;
         display: flex;
 
@@ -107,7 +113,13 @@
         
     }
 
+    .PersonalSkills{
+        margin-bottom: -100px;
+    }
+
     .MyProjects{
+        margin-bottom: -105px;
+
         div {
             .swift {
                 h3{
