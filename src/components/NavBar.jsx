@@ -69,16 +69,16 @@ const openMenu = () => {
         <ul style={soon ? {background:  "#79AF8E"} : {background:  "#1A0A52"}} id='navbar' className={menu ? '#navbar active' : '#navbar' || 'light-theme-bg'}>
         {/* <ul id="navbar" className="#navbar active"> */}
           <li>
-            <a className={soon ? 'light-theme-color' : 'dark-theme-color'} href="#Сontacts">{leng ? 'Сontacts' : 'Контакты'}</a>
+            <a className={soon ? 'light-theme-color' : 'dark-theme-color'} href="/#Сontacts">{leng ? 'Сontacts' : 'Контакты'}</a>
           </li>
           <li>
-            <a href="#Skills">{leng ? 'Skills' : 'Навыки'}</a>
+            <a href="/#Skills">{leng ? 'Skills' : 'Навыки'}</a>
           </li>
           <li>
-            <a href="#MyProjects">{leng ? 'My projects' : 'Мои проекты'}</a>
+            <a href="/#MyProjects">{leng ? 'My projects' : 'Мои проекты'}</a>
           </li>
           <li>
-            <a href="#education">{leng ? 'Education' : 'Образование'}</a>
+            <a href="/#education">{leng ? 'Education' : 'Образование'}</a>
           </li>
         </ul>
       </div>
